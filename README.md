@@ -81,6 +81,3 @@ If you spot a bug, have a more elegant solution, or just want to add another cla
 ### License
 These are college lab programs, so let's keep it simple. It's under the MIT License, which basically means you can do whatever you want with it, just give credit. See `LICENSE` for more info.
 
-### Contact
-[Your Name] - [Your Email Address]
-Project Link: [https://github.com/[YourGitHubUsername]/the-c-lab-lifesaver](https://github.com/[YourGitHubUsername]/the-c-lab-lifesaver)
