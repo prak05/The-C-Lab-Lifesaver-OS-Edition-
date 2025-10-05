@@ -1,83 +1,121 @@
-# The C Lab Lifesaver: OS Edition
+# 🌊 The C Lab Lifesaver — OS Edition
 
-## Your (Hopefully) Bug-Free Companion to OS Lab Programs!
+<div align="center">
 
-### Project Overview
-Ah, college labs. The late nights, the cryptic error messages, the sheer joy of seeing your `printf` actually work! This repository is a nostalgic collection of my C language lab programs, primarily focusing on Operating Systems concepts. Consider this your little treasure chest (or maybe a digital life raft?) of code that helped me (and hopefully will help you!) navigate the challenging waters of OS practicals.
+![Header](https://capsule-render.vercel.app/api?type=waving\&color=0:042940,100:06b6d4\&height=220\&section=header\&text=🛟%20THE%20C%20LAB%20LIFESAVER\&fontSize=44\&fontColor=ffffff\&animation=twinkling\&desc=Operating%20Systems%20Practical%20Programs%20in%20C\&descSize=14)
 
-I've put these up here not just for old times' sake, but to give a helping hand to anyone currently battling with these concepts. Maybe you'll find a different perspective, a clearer implementation, or just a good old `printf("Hello World");` moment of comfort. Good luck, future engineers! May your compilers be ever swift and your segmentation faults few.
+[![Language: C](https://img.shields.io/badge/Language-C-00599C?style=for-the-badge\&logo=c\&logoColor=white)]()
+[![Status](https://img.shields.io/badge/Status-Lab%20Ready-10B981?style=for-the-badge)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-000000?style=for-the-badge)]()
 
-### What's Inside This Time Capsule?
+</div>
 
-This repo is packed with C code demonstrating fundamental Operating Systems algorithms and concepts:
+A compact, student-friendly collection of classic **Operating Systems** lab programs implemented in **C** — CPU scheduling, page replacement, memory allocation, disk scheduling, process management, and more. This repo was made as a study / reference aid for OS practicals and lab exams. ([GitHub][1])
 
-#### 1. CPU Scheduling Algorithms
-* **FCFS.c (First-Come, First-Served):** The fairest of them all, sometimes.
-* **SJF.c (Shortest Job First):** Where tiny tasks get VIP treatment.
+---
 
-#### 2. Page Replacement Algorithms
-* **FIFO.c (First-In, First-Out):** The one that just throws out the oldest page, no questions asked.
-* **LRU.c (Least Recently Used):** The sophisticated one that remembers what you haven't touched in ages.
+# 🔎 At a glance
 
-#### 3. Memory Management Algorithms
-* **bf.c (Best Fit):** Tries to find the snuggest spot for your program.
-* **ff.c (First Fit):** Grabs the first available spot it sees – often the simplest.
-* **wf.c (Worst Fit):** Leaves the biggest possible hole for future programs, bless its heart.
+* Language: **C (100%)**. ([GitHub][1])
+* Includes canonical lab programs such as **FCFS, SJF, Priority Scheduling, Round Robin, LRU, FIFO, Banker’s algorithm, various disk scheduling (SCAN / C-SCAN)** and memory allocation demos. ([GitHub][1])
+* Target audience: college students, TAs, and anyone revising OS practicals. ([GitHub][1])
 
-#### 4. Disk Scheduling Algorithms
-* **scan.c (SCAN / Elevator Algorithm):** The one that sweeps back and forth, like a polite elevator.
+---
 
-#### 5. Process Management
-* **fork.c (Process Creation using `fork()`):** Witnessing the magic (and sometimes chaos) of creating child processes.
+# 🗂️ What’s in the repo (selected)
 
-### Technologies Used
+* `FCFS.c` / `FCFS.c.save` — First-Come First-Served scheduling
+* `ROUND ROBIN.c` / `ROUND ROBIN.c.save` — Round Robin scheduler
+* `PRIORITY SCHEDULING.c` — Priority scheduling example
+* `fifo.c` / `LRU.c` — Page replacement demos (FIFO, LRU)
+* `banker.c` — Banker’s algorithm for deadlock avoidance
+* `c-scan.c` / `dsk FC.c` — Disk scheduling algorithms (SCAN / C-SCAN / FCFS)
+* `bf.c`, `ff.c`, `wf.c` (typical memory allocation stubs)
+  (Full file list visible in the repo.) ([GitHub][1])
 
-* **Language:** C (The OG!)
-* **Compiler:** GCC (or whatever old friend you use)
-* **Environment:** Your favorite Linux terminal, or perhaps a nostalgic Windows Subsystem for Linux (WSL) setup.
-* **Version Control:** Git & GitHub (because even college labs deserve proper versioning!)
+---
 
-### Getting Started (The Old School Way)
+# 🧭 Quickstart — compile & run
 
-To run any of these programs, you'll need a C compiler (like GCC) installed on your system.
+Make sure you have `gcc` (or equivalent) installed.
 
-#### Prerequisites
+Compile & run an example (use the actual filename from repo — some filenames contain spaces/case):
 
-* GCC (or Clang, MinGW, etc.)
+```bash
+# Clone (if you haven't already)
+git clone https://github.com/prak05/The-C-Lab-Lifesaver-OS-Edition-.git
+cd The-C-Lab-Lifesaver-OS-Edition-
 
-#### Installation & Compilation
+# Compile FCFS (example) — replace name if different
+gcc "FCFS.c" -o fcfs
+./fcfs
 
-1.  **Clone this repository:**
-    ```bash
-    git clone [https://github.com/](https://github.com/)[YourGitHubUsername]/the-c-lab-lifesaver.git
-    ```
-2.  **Navigate into the project directory:**
-    ```bash
-    cd the-c-lab-lifesaver
-    ```
-3.  **Compile any `.c` file:**
-    ```bash
-    gcc your_program_name.c -o your_program_name
-    ```
-    (Replace `your_program_name.c` with the actual file name, e.g., `FCFS.c`)
-4.  **Run the compiled program:**
-    ```bash
-    ./your_program_name
-    ```
-    (Or `.\your_program_name.exe` on Windows if you used MinGW)
+# Compile Round Robin (note space in filename in this repo)
+gcc "ROUND ROBIN.c" -o rr
+./rr
+```
 
-### A Little Note for Fellow Students
-These programs are here to help you understand the logic. **Please, please, please** use them as a reference and for learning, not just for copy-pasting your way through assignments. The real learning happens when you type out the code, debug it, and truly grasp the concepts. You got this! 💪
+Tips:
 
-### Contributing (If you're feeling nostalgic too!)
-If you spot a bug, have a more elegant solution, or just want to add another classic college C program, feel free to contribute!
+* If filenames have spaces (e.g., `ROUND ROBIN.c`) either rename locally or quote the name when compiling.
+* Use `-Wall -Wextra` flags to catch warnings: `gcc -Wall -Wextra "FCFS.c" -o fcfs`.
 
-1.  Fork this repository.
-2.  Create your Feature Branch (`git checkout -b feature/your-awesome-fix`).
-3.  Commit your Changes (`git commit -m 'Fix: A classic bug in FCFS'`).
-4.  Push to the Branch (`git push origin feature/your-awesome-fix`).
-5.  Open a Pull Request.
+---
 
-### License
-These are college lab programs, so let's keep it simple. It's under the MIT License, which basically means you can do whatever you want with it, just give credit. See `LICENSE` for more info.
+# 🧠 Short descriptions & learning notes
+
+* **CPU Scheduling (FCFS / SJF / Priority / RR):** Understand how turnaround and waiting times differ with preemptive vs non-preemptive policies. Try varying time quantum for Round Robin and observe effects. ([GitHub][1])
+* **Page Replacement (FIFO / LRU):** Test with different reference strings to see hit/miss patterns. LRU approximates optimal when access locality exists. ([GitHub][1])
+* **Memory Allocation (First Fit / Best Fit / Worst Fit):** Compare external fragmentation outcomes. ([GitHub][1])
+* **Disk Scheduling (SCAN / C-SCAN / FCFS):** Visualize head movement to reason about average seek time. ([GitHub][1])
+
+Mermaid study map:
+
+```mermaid
+graph LR
+A[CPU Scheduling] --> B[FCFS]
+A --> C[SJF]
+A --> D[Round Robin]
+E[Memory] --> F[FirstFit]
+E --> G[BestFit]
+E --> H[WorstFit]
+I[Page Replacement] --> J[FIFO]
+I --> K[LRU]
+L[Disk Scheduling] --> M[SCAN]
+L --> N[C-SCAN]
+```
+
+---
+
+# ✅ Contributing
+
+Small, friendly rules:
+
+1. Fork the repo.
+2. Add/rename files with clear names (avoid spaces if possible).
+3. Add a short `problem-name.md` alongside `.c` explaining input format, expected output, time/space complexity.
+4. Run and test locally.
+5. Open a PR with a clear title (e.g., `feat: add SJF preemptive with sample I/O`).
+
+If you submit solutions for lab assignments, include comments explaining each step — it helps peers learn.
+
+---
+
+# 📘 Academic honesty
+
+Use these programs to learn, not to blindly copy for submissions. Labs are learning experiences — type, debug, and understand the output. The goal is *understanding*, not just matching outputs. ([GitHub][1])
+
+---
+
+# 🧾 License
+
+This repo follows the **MIT License** (see repository license). ([GitHub][1])
+
+---
+
+# 👤 Author
+
+**prak05** — student-friendly OS lab solutions (see repo for full file list and examples). ([GitHub][1])
+
+---
 
